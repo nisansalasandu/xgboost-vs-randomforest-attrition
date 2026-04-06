@@ -21,7 +21,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="main-header">ℹ️ About This Project</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-header">About This Project</p>', unsafe_allow_html=True)
 
 # ── Project overview ───────────────────────────────────────────────────────────
 st.markdown('<p class="section-head">Project Overview</p>', unsafe_allow_html=True)
@@ -36,11 +36,11 @@ its predictions differently, and which model is better suited for HR decision su
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.info("**📋 Problem Type**\n\nBinary classification — predict whether an employee will leave (Yes) or stay (No).")
+    st.info("**Problem Type**\n\nBinary classification — predict whether an employee will leave (Yes) or stay (No).")
 with col2:
-    st.info("**🎯 Business Goal**\n\nHelp HR teams identify at-risk employees early so proactive retention actions can be taken.")
+    st.info("**Business Goal**\n\nHelp HR teams identify at-risk employees early so proactive retention actions can be taken.")
 with col3:
-    st.info("**🔬 Research Question**\n\nWhich model — XGBoost or Random Forest — performs better on imbalanced HR attrition data?")
+    st.info("**Research Question**\n\nWhich model — XGBoost or Random Forest — performs better on imbalanced HR attrition data?")
 
 st.divider()
 
@@ -154,7 +154,7 @@ team = [
     ("Member 4 - Ravindu",        "Random Forest model & tuning"),
     ("Member 5 - Hirushi",        "XGBoost model & tuning"),
     ("Member 6 - Disni",        "Evaluation metrics & plots"),
-    ("Member 7 - Bhanuka",        "Feature importance & SHAP"),
+    ("Member 7 - Bhanuka",        "Feature importance & SHAP, Code Inspection"),
     ("Member 8 - Dasun",        "Final report & comparison notebook"),
 ]
 
@@ -179,29 +179,3 @@ st.markdown("""
 - **Dataset:** [IBM HR Analytics on Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
 - **Duration:** 2 weeks (10 days) — Data Science Internship Project
 """)
-
-st.markdown('<p class="section-head">Project Structure</p>', unsafe_allow_html=True)
-st.code("""
-xgboost-vs-randomforest-attrition/
-├── data/
-│   ├── raw/                  <- original IBM HR CSV
-│   └── processed/            <- 7 CSV files from Notebook 01
-├── notebooks/
-│   ├── 01_eda_clean_preprocess.ipynb
-│   ├── 02_random_forest_model.ipynb
-│   ├── 03_Model_Training_XGBoost.ipynb
-│   └── 04_model_comparison.ipynb
-├── models/                   <- 8 saved model files
-├── figures/          <- 22 saved plots
-├── app/                      <- this Streamlit app
-│   ├── app.py
-│   ├── pages/
-│   │   ├── 01_predictor.py
-│   │   ├── 02_comparison.py
-│   │   └── 03_about.py
-│   └── utils/
-│       ├── predictor.py
-│       └── charts.py
-├── requirements.txt
-└── README.md
-""", language="")

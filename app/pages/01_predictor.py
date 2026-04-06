@@ -32,7 +32,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Page header ────────────────────────────────────────────────────────────────
-st.markdown('<p class="main-header">🔮 Live Attrition Predictor</p>',
+st.markdown('<p class="main-header">Live Attrition Predictor</p>',
             unsafe_allow_html=True)
 st.markdown("Enter employee details to get attrition risk predictions from **both models simultaneously**.")
 
@@ -94,7 +94,7 @@ with st.form("prediction_form"):
         yrs_co     = st.slider("Years at Company", 0, 40, 5)
         total_yrs  = st.slider("Total Working Years", 0, 40, 10)
 
-    submitted = st.form_submit_button("🔮 Predict Attrition Risk",
+    submitted = st.form_submit_button("Predict Attrition Risk",
                                        use_container_width=True,
                                        type="primary")
 
@@ -169,9 +169,9 @@ if submitted:
 
         if rf_pred == xgb_pred:
             label = "At Risk" if rf_pred == 1 else "Not at Risk"
-            st.success(f"✅ Both models agree — **{label}** (default threshold 0.5)")
+            st.success(f"Both models agree — **{label}** (default threshold 0.5)")
         else:
-            st.warning("⚠️ Models disagree at default threshold (0.5). Consider reviewing with lower threshold.")
+            st.warning("Models disagree at default threshold (0.5). Consider reviewing with lower threshold.")
 
         # ── Progress bars ──────────────────────────────────────────────────────
         st.divider()
@@ -179,11 +179,11 @@ if submitted:
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("**Random Forest**")
-            st.progress(result['rf_proba'])
+            st.progress(float(result['rf_proba']))
             st.caption(f"{rf_pct}% attrition probability")
         with col2:
             st.markdown("**XGBoost**")
-            st.progress(result['xgb_proba'])
+            st.progress(float(result['xgb_proba']))
             st.caption(f"{xgb_pct}% attrition probability")
 
         # ── Top features ──────────────────────────────────────────────────────

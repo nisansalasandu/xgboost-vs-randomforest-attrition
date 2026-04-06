@@ -151,8 +151,8 @@ def predict(user_inputs: dict):
     xgb_label, xgb_css = risk_label(xgb_proba)
 
     return {
-        'rf_proba'   : rf_proba,
-        'xgb_proba'  : xgb_proba,
+        'rf_proba'   : float(rf_proba),
+        'xgb_proba'  : float(xgb_proba),
         'rf_label'   : rf_label,
         'xgb_label'  : xgb_label,
         'rf_css'     : rf_css,

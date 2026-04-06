@@ -49,7 +49,7 @@ st.markdown("""
 
 # ── Sidebar branding ───────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("## 📊 Attrition Predictor")
+    st.markdown("## Attrition Predictor")
     st.markdown("**XGBoost vs Random Forest**")
     st.markdown("IBM HR Analytics · Internship Project")
     st.divider()
@@ -70,11 +70,11 @@ st.markdown('<p class="sub-header">Comparative study: XGBoost vs Random Forest �
 st.markdown("### What this app does")
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.info("**🔮 Live Prediction**\n\nEnter employee details and get attrition risk predictions from both models simultaneously.")
+    st.info("**Live Prediction**\n\nEnter employee details and get attrition risk predictions from both models simultaneously.")
 with col2:
-    st.info("**📈 Model Comparison**\n\nSide-by-side metrics, ROC curves, feature importances and confusion matrices.")
+    st.info("**Model Comparison**\n\nSide-by-side metrics, ROC curves, feature importances and confusion matrices.")
 with col3:
-    st.info("**📋 Full Transparency**\n\nSee exactly which features drive each prediction and how the models differ.")
+    st.info("**Full Transparency**\n\nSee exactly which features drive each prediction and how the models differ.")
 
 st.divider()
 
@@ -134,9 +134,9 @@ st.markdown("### Get started")
 c1, c2 = st.columns(2)
 with c1:
     st.page_link("pages/01_predictor.py",
-                 label="🔮  Go to Live Predictor",
+                 label="Go to Live Predictor",
                  use_container_width=True)
 with c2:
     st.page_link("pages/02_comparison.py",
-                 label="📈  Go to Model Comparison",
+                 label="Go to Model Comparison",
                  use_container_width=True)

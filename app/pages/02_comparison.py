@@ -35,7 +35,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="main-header">📈 Model Comparison</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-header">Model Comparison</p>', unsafe_allow_html=True)
 st.markdown("Full side-by-side evaluation of **Random Forest vs XGBoost** on the held-out test set.")
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
